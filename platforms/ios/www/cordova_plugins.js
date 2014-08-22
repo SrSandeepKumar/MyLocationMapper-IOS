@@ -7,6 +7,22 @@ module.exports = [
             "plugin.google.maps"
         ]
     },
+    
+                  {
+                  "file": "plugins/com.native5.plugins.navbar/www/NavigationBar.js",
+                  "id": "com.native5.plugins.navbar.navbar",
+                  "clobbers": [
+                               "window.navbar"
+                               ]
+                  },
+                  {
+                  "file": "plugins/ru.dextra.cordova.tabbar/www/TabBar.js",
+                  "id": "ru.dextra.cordova.tabbar.tabbar",
+                  "clobbers": [
+                               "window.tabbar"
+                               ]
+                  },
+    
     {
         "file": "plugins/plugin.http.request/www/http-request.js",
         "id": "plugin.http.request.phonegap-http-requst",

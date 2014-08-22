@@ -1,25 +1,39 @@
 document.addEventListener('deviceready', function() {
-    window.plugins.navBar.setSelectedTab(1);
-    window.plugins.navBar.tabs = [
-        { 
-            text: ' Map',
-            select: function() {
-                
-                window.location.href = "index.html";
-            }
-        },
-        { 
-
-            text: ' History',
-            select: function() {
-                window.location.href = "history.html";
-                map.refreshLayout();
-                map.setVisible(false);
-            },
-        }
-    ];
-    window.plugins.navBar.show();
+    
+                          
+                          window.plugins.tabBar.createItem(
+                                                           "map",
+                                                           "MAP",
+                                                           "map32.png",
+                                                           {onSelect:selectMap});
+                          
+                          window.plugins.tabBar.createItem(
+                                                           "history",
+                                                           "HISTORY",
+                                                           "history32.png",
+                                                           {onSelect:selectHistory});
+                          
+                          window.plugins.tabBar.showItems('map','history');
+                          
+                          window.plugins.tabBar.show();
+                          
+                          
+                          
+                          
 });
+
+
+function selectMap(){
+    map.clear();
+    map.setVisible(true);
+    window.location.href = "index.html";
+}
+
+function selectHistory(){
+    map.refreshLayout();
+    map.setVisible(false);
+    window.location.href = "history.html";
+}
 
 var count = 0;
 

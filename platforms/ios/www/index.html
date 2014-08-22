@@ -26,12 +26,13 @@
 
 
     <link rel="stylesheet" type="text/css" href="resources/fonts/fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="resources/styles/index.css">
+   
     <link rel="stylesheet" type="text/css" href="resources/styles/jquery.mobile-1.4.2.min.css">
     <link rel="stylesheet" type="text/css" href="resources/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="resources/styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resources/styles/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="resources/styles/bootstrap-theme.min.css">
+         <link rel="stylesheet" type="text/css" href="resources/styles/index.css">
     <meta name="msapplication-tap-highlight" content="no" />
 
     <title>My Location Mapper</title>
@@ -40,11 +41,9 @@
 </head>
 
 <body>
-    <div id='map_canvas'> </div>
-    
-    
+<div id='map_canvas'> </div> 
 
-    <div class='bottom-logo'> 
+    <div class='bottom-logo'>
         <div class = "row">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"  >
                 <div class="time1">    
@@ -75,87 +74,10 @@
             <script type="text/javascript" src="resources/scripts/stopwatch.js"></script>
             <script type="text/javascript" src="resources/scripts/map-api.js"></script> 
             <script type="text/javascript" src="resources/scripts/native5.utils.DateUtils.js"></script>
-            <script type="text/javascript" src="resources/scripts/plotLine.js"></script> 
-            <script type="text/javascript">
-            var target = [];
-var alpha = true ;
-// var toasting = true;
-errorInGettingPostion = true;
-                document.addEventListener('deviceready', function() {
-
-                      window.plugins.navBar.setSelectedTab(0);
-    window.plugins.navBar.menu = [
-        {
-            text: 'Start',
-            click: function() {
-                watchPosition();
-                if(errorInGettingPostion == false){
-                    if(alpha == true){
-                        window.plugins.toast.showLongCenter('Starting to Mark your track', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-                        alpha = false;
-                        show();
-                        start();
-                    }
-                }
-                else{
-                    window.plugins.toast.showLongCenter('Could not determine your current Location , Kindly ensure GPS and Internet is enabled !', function(a){console.log('toast success: ' + a)}, function(b){console.log('toast error: ' + b)});
-                    alpha = true;
-                }
-
-            }
-        },
-
-        {
-            text: 'Stop',
-            click: function() {
-                if(alpha == false){
-                    // toasting == true;
-                    if(confirm("Do you want to save trail ?")){
-                        storeLoc(locArray);
-                        map.refreshLayout();
-                        map.setVisible(false);
-
-                        window.location = "stopInput.html";
-                        if (watchID != null) {
-                            navigator.geolocation.clearWatch(watchID);
-                            watchID = null;
-                        }
-                        locArray.length = 0;
-                    }
-                    else{
-                        window.location = "index.html";
-                    }
-                }
-            }
-        }
-    ];
-
-                    window.plugins.navBar.setTabs([
-                    { 
-                        text: ' Map',
-                        selected:false,
-                        select: function() {
-                            window.location.href = "index.html"; 
-                        }
-                    },
-
-                    { 
-                        text: ' History',
-                        selected:false,
-                        select: function() {
-                            map.refreshLayout();
-                            map.setVisible(false);
-                            window.location.href = "history.html";
-                        }
-                    }
-
-                    ]);
-
-                    window.plugins.navBar.setNavigationMode(window.plugins.navBar.NAVIGATION_MODE_TABS);
-                });
-
-            </script> 
-            <script type="text/javascript" src="resources/scripts/nav-bar.js"></script> 
+            <script type="text/javascript" src="resources/scripts/plotLine.js"></script>
+            <!--  <script type="text/javascript" src="resources/scripts/tab-bar.js"></script>  -->
+            <!-- <script type="text/javascript" src="resources/scripts/tab-bar.js"></script> -->
+             <script type="text/javascript" src="resources/scripts/nav-tab-bar.js"></script>
             <!-- <script type="text/javascript" src="resources/scripts/stopInput.js"></script>  -->
             
 

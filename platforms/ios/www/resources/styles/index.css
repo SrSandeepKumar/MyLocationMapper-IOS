@@ -19,34 +19,34 @@
 
 
 
-div.top-bar
-{
-  display: table-cell;
-  background-color: lightblue;
-  width: 99%;
-  height: 3em;
-  box-shadow: 10px 10px 5px #888888;
-  position: fixed;
-}
+//div.top-bar
+//{
+//  display: table-cell;
+//  background-color: lightblue;
+//  width: 99%;
+//  height: 3em;
+//  box-shadow: 10px 10px 5px #888888;
+//  position: fixed;
+//}
 
 
-div.app-name{
-  text-align: center;
-  margin-top: -20px;
-}
-
-div.logo-start{
-  margin-left: 1em;
-  margin-top: 20px;
-
-}
-
-div.logo-settings{
-  margin-top: -20px;
-  float: right;
-  margin-right: 1em;
-
-}  
+//div.app-name{
+//  text-align: center;
+//  margin-top: -20px;
+//}
+//
+//div.logo-start{
+//  margin-left: 1em;
+//  margin-top: 20px;
+//
+//}
+//
+//div.logo-settings{
+//  margin-top: -20px;
+//  float: right;
+//  margin-right: 1em;
+//
+//}  
 
 
 div.bottom-logo{
@@ -77,17 +77,6 @@ div.bottom-logo{
   width:100%;
 }
 
-div.bstart{
-  float: left;
-  margin-left: 3em;
-}
-
-div.bstop{
-  margin-bottom: -20px;
-  float: right;
-  margin-right: 3em;
-
-}
 
 html,body {
   height: 100%;
@@ -96,7 +85,7 @@ html,body {
 
 #map_canvas{
   width: 100%;
-  height: 89%;
+  height: 82%;
   background-color: #eee;
 
 }
