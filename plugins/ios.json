@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"GoogleMaps\"><param name=\"ios-package\" value=\"GoogleMaps\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -84,7 +88,7 @@
                     "QuartzCore.framework": [
                         {
                             "xml": "false",
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "SystemConfiguration.framework": [
@@ -110,6 +114,9 @@
     "installed_plugins": {
         "plugin.google.maps": {
             "API_KEY_FOR_IOS": "AIzaSyBTVvRF5MHLWiiA4S7KIXW70Q3aZVKBcAw",
+            "PACKAGE_NAME": "com.Application.LocationMapper"
+        },
+        "nl.x-services.plugins.toast": {
             "PACKAGE_NAME": "com.Application.LocationMapper"
         }
     },

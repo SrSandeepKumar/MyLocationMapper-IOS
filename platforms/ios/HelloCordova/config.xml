@@ -19,13 +19,16 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
-     <feature name="TabBar">
-      <param name="ios-package" value="TabBar" />
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
     </feature>
-
+    <feature name="TabBar">
+        <param name="ios-package" value="TabBar" />
+    </feature>
     <feature name="NavigationBar">
         <param name="ios-package" value="NavigationBar" />
-    </feature>     <name>HelloCordova</name>
+    </feature>
+    <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -39,5 +42,8 @@
     </feature>
     <feature name="GoogleMaps">
         <param name="ios-package" value="GoogleMaps" />
+    </feature>
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
     </feature>
 </widget>

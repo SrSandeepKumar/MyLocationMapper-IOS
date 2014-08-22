@@ -63,6 +63,8 @@
 		9AB634DA19A4A16600E69B72 /* nav-tab-bar.js in Sources */ = {isa = PBXBuildFile; fileRef = 9AB634D919A4A16600E69B72 /* nav-tab-bar.js */; };
 		9AB844E419A7414C005D5511 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB844E219A7414C005D5511 /* back.png */; };
 		9AB844E519A7414C005D5511 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB844E319A7414C005D5511 /* back@2x.png */; };
+		9AB844EC19A74B8D005D5511 /* tests.js in Sources */ = {isa = PBXBuildFile; fileRef = 9AB844E919A74B8D005D5511 /* tests.js */; };
+		9AB844ED19A74B8D005D5511 /* Toast.js in Sources */ = {isa = PBXBuildFile; fileRef = 9AB844EB19A74B8D005D5511 /* Toast.js */; };
 		9AC1DCD419A721C70053CE58 /* history32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1DCD319A721C70053CE58 /* history32.png */; };
 		9AC1DCD619A721CD0053CE58 /* history32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1DCD519A721CD0053CE58 /* history32@2x.png */; };
 		9AC1DCD819A721D50053CE58 /* map32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1DCD719A721D50053CE58 /* map32.png */; };
@@ -167,10 +169,12 @@
 		9AF55D07199CD426005D35DB /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = 9AF55D03199CD426005D35DB /* index.js */; };
 		A77AF845A03E4E77BECF8E64 /* GoogleMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E810EC96735F4468B0599292 /* GoogleMapsViewController.m */; };
 		AA0B42C968634FF5AA39DDB3 /* KmlOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D4A745BFE6416488670413 /* KmlOverlay.m */; };
+		AD41A5D9F5604848B7FDED6F /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1CC3DD0954585B0EACF2A /* Toast.m */; };
 		B2AB6FFBF0974B87B6C630CE /* Polygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EB11B90354BFFB6EFCDF8 /* Polygon.m */; };
 		C79628CDD44042DB9330E07D /* TileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF48E56C5B45D3AF4EAF7E /* TileOverlay.m */; };
 		CCCA834DFEF1400CAAEE95B2 /* External.m in Sources */ = {isa = PBXBuildFile; fileRef = 349EA0F37E81426FB8C6A0A7 /* External.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		DE3840963122491F9C1D0253 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = C32762CD732745BDA4B116F5 /* Toast+UIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +197,7 @@
 /* Begin PBXFileReference section */
 		0B07CF5EF495495D80E41AEE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = HelloCordova/Plugins/com.googlemaps.ios/GoogleMaps.framework; sourceTree = "<group>"; };
 		0D4BD65A5EE047D58AB71B2C /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = plugin.http.request/HttpRequest/HttpRequest.h; sourceTree = "<group>"; };
+		184D19FD594944F0AF741387 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "nl.x-services.plugins.toast/Toast+UIView.h"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* HelloCordova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCordova.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +269,8 @@
 		9AB634D919A4A16600E69B72 /* nav-tab-bar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "nav-tab-bar.js"; sourceTree = "<group>"; };
 		9AB844E219A7414C005D5511 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		9AB844E319A7414C005D5511 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		9AB844E919A74B8D005D5511 /* tests.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tests.js; sourceTree = "<group>"; };
+		9AB844EB19A74B8D005D5511 /* Toast.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Toast.js; sourceTree = "<group>"; };
 		9AC1DCD319A721C70053CE58 /* history32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history32.png; sourceTree = "<group>"; };
 		9AC1DCD519A721CD0053CE58 /* history32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history32@2x.png"; sourceTree = "<group>"; };
 		9AC1DCD719A721D50053CE58 /* map32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map32.png; sourceTree = "<group>"; };
@@ -372,6 +379,7 @@
 		A7926FE5C60541F49546E996 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Map.m; path = plugin.google.maps/Map.m; sourceTree = "<group>"; };
 		AF99D511EC314FF48BCFA7A7 /* R9HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = R9HTTPRequest.h; path = plugin.http.request/HttpRequest/R9HTTPRequest/R9HTTPRequest.h; sourceTree = "<group>"; };
 		BC392F1687DD4FADBE95F9E2 /* Polyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Polyline.m; path = plugin.google.maps/Polyline.m; sourceTree = "<group>"; };
+		C32762CD732745BDA4B116F5 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "nl.x-services.plugins.toast/Toast+UIView.m"; sourceTree = "<group>"; };
 		CD2EB11B90354BFFB6EFCDF8 /* Polygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Polygon.m; path = plugin.google.maps/Polygon.m; sourceTree = "<group>"; };
 		CE24394809F1493D982AFE9D /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "plugin.google.maps/NSData+Base64.h"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
@@ -386,8 +394,10 @@
 		E8A2CE45089E4424AC013E4D /* GroundOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroundOverlay.m; path = plugin.google.maps/GroundOverlay.m; sourceTree = "<group>"; };
 		EB87FDF21871DA7A0020F90C /* merges */ = {isa = PBXFileReference; lastKnownFileType = folder; name = merges; path = ../../merges; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
+		F5D1CC3DD0954585B0EACF2A /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Toast.m; path = "nl.x-services.plugins.toast/Toast.m"; sourceTree = "<group>"; };
 		F6D2CD7D7F5548959A19B26D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "plugin.google.maps/NSData+Base64.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
+		FAF55CC9F11F4E1BBFB2883B /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = "nl.x-services.plugins.toast/Toast.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +405,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF55BA2199CBACF005D35DB /* QuartzCore.framework in Frameworks */,
 				9AF55B99199CBACF005D35DB /* AVFoundation.framework in Frameworks */,
 				9AF55B9A199CBACF005D35DB /* CoreData.framework in Frameworks */,
 				9AF55B9B199CBACF005D35DB /* CoreText.framework in Frameworks */,
@@ -404,7 +415,6 @@
 				9AF55B9F199CBACF005D35DB /* libicucore.dylib in Frameworks */,
 				9AF55BA0199CBACF005D35DB /* libz.dylib in Frameworks */,
 				9AF55BA1199CBACF005D35DB /* OpenGLES.framework in Frameworks */,
-				9AF55BA2199CBACF005D35DB /* QuartzCore.framework in Frameworks */,
 				9AF55BA3199CBACF005D35DB /* SystemConfiguration.framework in Frameworks */,
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				9AF55B8B199CBA29005D35DB /* GoogleMaps.framework in Frameworks */,
@@ -582,6 +592,10 @@
 				DC4494C6FF7C4F99BA6C418B /* TileOverlay.h */,
 				CE24394809F1493D982AFE9D /* NSData+Base64.h */,
 				7460003F7D9D4EC58679035B /* NSData+Base64.podspec */,
+				C32762CD732745BDA4B116F5 /* Toast+UIView.m */,
+				F5D1CC3DD0954585B0EACF2A /* Toast.m */,
+				184D19FD594944F0AF741387 /* Toast+UIView.h */,
+				FAF55CC9F11F4E1BBFB2883B /* Toast.h */,
 			);
 			name = Plugins;
 			path = HelloCordova/Plugins;
@@ -691,6 +705,31 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		9AB844E719A74B8D005D5511 /* nl.x-services.plugins.toast */ = {
+			isa = PBXGroup;
+			children = (
+				9AB844E819A74B8D005D5511 /* test */,
+				9AB844EA19A74B8D005D5511 /* www */,
+			);
+			path = "nl.x-services.plugins.toast";
+			sourceTree = "<group>";
+		};
+		9AB844E819A74B8D005D5511 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				9AB844E919A74B8D005D5511 /* tests.js */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		9AB844EA19A74B8D005D5511 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				9AB844EB19A74B8D005D5511 /* Toast.js */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
 		9AF55C50199CD40D005D35DB /* www */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +748,7 @@
 		9AF55C55199CD40D005D35DB /* plugins */ = {
 			isa = PBXGroup;
 			children = (
+				9AB844E719A74B8D005D5511 /* nl.x-services.plugins.toast */,
 				9A721A7D19A3765F00242A42 /* com.native5.plugins.navbar */,
 				9A721A7919A3765400242A42 /* ru.dextra.cordova.tabbar */,
 			);
@@ -1130,6 +1170,7 @@
 				9AF55CDD199CD40D005D35DB /* bootstrap.js in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				9AB634DA19A4A16600E69B72 /* nav-tab-bar.js in Sources */,
+				9AB844ED19A74B8D005D5511 /* Toast.js in Sources */,
 				9AF55CE0199CD40D005D35DB /* history.js in Sources */,
 				9AF55CE6199CD40D005D35DB /* native5.utils.DateUtils.js in Sources */,
 				9A721A7719A3764900242A42 /* N5NavigationBar.m in Sources */,
@@ -1169,6 +1210,9 @@
 				15C89FACB50D420EA9DC69C0 /* TBXML.m in Sources */,
 				C79628CDD44042DB9330E07D /* TileOverlay.m in Sources */,
 				0B33A4FC335542508B0CCB19 /* NSData+Base64.m in Sources */,
+				DE3840963122491F9C1D0253 /* Toast+UIView.m in Sources */,
+				9AB844EC19A74B8D005D5511 /* tests.js in Sources */,
+				AD41A5D9F5604848B7FDED6F /* Toast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

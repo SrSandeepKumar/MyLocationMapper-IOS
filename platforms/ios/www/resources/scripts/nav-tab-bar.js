@@ -12,35 +12,45 @@ window.plugins.navBar.create('Default',{'tintColorRgba':"163,30,24,1"});
 // window.plugins.navBar.setLogo('logo_header.png');
 window.plugins.navBar.setTitle('Location Mapper');
 
-window.plugins.navBar.setupLeftButton('', "back.png", function(){}, {"useImageAsBackground":true});
+window.plugins.navBar.setupLeftButton('', "back.png", function(){
+   if(confirm("want to exit ?")){
+        navigator.app.exitApp();
+    }
+}, {"useImageAsBackground":true});
                           
 //window.plugins.navBar.setupLeftButton("start", function(){goBack();}, {"useImageAsBackground":true});
 window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play1.png",
                       function(){
-                          if(confirm("Do you want to save trail ?")){
-                            alert("yes");
-                              storeLoc(locArray);
-                              map.refreshLayout();
-                              map.setVisible(false);
+                           if(alpha == false){
+            // toasting == true;
+            if(confirm("Do you want to save trail ?")){
+                storeLoc(locArray);
+                map.refreshLayout();
+                map.setVisible(false);
 
-                              window.location = "stopInput.html";
-
-                              if (watchID != null) {
-                                    navigator.geolocation.clearWatch(watchID);
-                                    watchID = null;
-                              }
-                            locArray.length = 0;
-                          }else{
-
-                            alert("no");
-                            window.location = "index.html";
-                        }
+                window.location = "stopInput.html";
+                if (watchID != null) {
+                    navigator.geolocation.clearWatch(watchID);
+                    watchID = null;
+                }
+                locArray.length = 0;
+            }else{window.location = "index.html";}
+        }
         
                       }, 
 
                       function(){ 
                             watchPosition();
-
+                            if(errorInGettingPostion == false){
+                              if(alpha == true){
+                             window.plugins.toast.showLongCenter('Starting to Mark your track', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+                            show();
+                            start();
+                      }
+                      }  else{
+            window.plugins.toast.showLongCenter('Could not determine your current Location , Kindly ensure GPS and Internet is enabled !', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+            alpha = true;
+        }                            
                       },
 
                        {"useImageAsBackground":true});
@@ -107,7 +117,7 @@ function storeLoc(pos){
 }
 
 function watchPosition(){
-    alert("in watch pos");
+     window.plugins.toast.showLongCenter('Starting to Mark your track', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
     var option = { timeout: 30000 };
    watchID = navigator.geolocation.watchPosition(onSuccess, onError, option);
 }
@@ -118,6 +128,7 @@ function onSuccess(position){
     locArray.push(abc);
     var d = findDistance(locArray);
     if(parseInt(d  * 1000) > 5 ) points.plotLine(locArray);
+    
     errorInGettingPostion = false;
 }
 
@@ -128,4 +139,61 @@ function onError(error) {
     // alert("Could not determine your current Location , Kindly ensure GPS and Internet is enabled !");
     errorInGettingPostion = true;
     console.log(errorInGettingPostion);
+}
+
+
+function findDistance(pos){
+    
+    var lat1 = pos[0].lat;
+    console.log(lat1);
+    var lon1 = pos[0].lng;
+    console.log(lon1);
+    var l = pos.length ;
+    console.log(l);
+    var lat2 = pos[l-1].lat;
+    var lon2 = pos[l-1].lng;
+    var theta = lon1-lon2;
+console.log(theta);
+
+    if (theta === 0) {
+        $distance = document.getElementById('distance');
+        $distance.innerHTML = "0 Km" ;
+    }
+else
+    {
+        var radlat1 = Math.PI * lat1/180;
+        var radlat2 = Math.PI * lat2/180;
+        var radlon1 = Math.PI * lon1/180;
+        var radlon2 = Math.PI * lon2/180;
+
+
+        var radtheta = Math.PI * theta/180;
+        var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+        dist = Math.acos(dist);
+        dist = dist * 180/Math.PI;
+        dist = dist * 60 * 1.1515;
+        distk = dist * 1.609344;
+        distm = (dist * 1.609344) * 1000;
+        $distance = document.getElementById('distance');
+        $distance.innerHTML = parseInt(distk) + " Kms" ;
+        
+        var clicks = false;
+        $(".distance").click(function() {
+            if (clicks) { 
+                /*$('#distance').html(parseInt(distk)+"Kms");*/
+                $distance = document.getElementById('distance');
+                $distance.innerHTML = parseInt(distk) + " Kms" ;
+                clicks = false;
+            } else {
+                clicks = true;
+                /* $('#distance').html(parseInt(distm)+"Meters");*/
+                $distance = document.getElementById('distance');
+                $distance.innerHTML = parseInt(distm) + " Meters" ;
+            }
+        });
+
+        console.log(distk);
+        return distk ; 
+
+    }
 }
