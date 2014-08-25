@@ -1,5 +1,5 @@
 document.addEventListener('deviceready', function() {
-    
+    alert("inside history");
                           
                           window.plugins.tabBar.createItem(
                                                            "map",

@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="resources/styles/history.css">
 <body>
 
+  <div class="beforelist"></div>
   <div class="list"></div>
 
   <script type="text/javascript" src="cordova.js"></script>
@@ -22,6 +23,22 @@
   <script type="text/javascript" src="resources/scripts/native5.utils.DateUtils.js"></script>
   <script type="text/javascript" src="resources/scripts/plotLine.js"></script>
   <script type="text/javascript" src="resources/scripts/settings-nav-bar.js"></script>
-</script>
+  <script type = "text/javascript">
+  document.addEventListener('deviceready', function() {
+    alert("inside the navbar module of the history");
+    window.plugins.navBar.setTitle("History");
+
+    window.plugins.navBar.setupRightButtons(''," ",''," ",
+      function(){ }, 
+
+      function(){ },
+
+      {"useImageAsBackground":true});
+
+    window.plugins.tabBar.setSelectedTab("history");
+
+  });
+  alert("over");
+      </script>
 </body>
 </html>

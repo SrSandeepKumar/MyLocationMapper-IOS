@@ -81,7 +81,11 @@
             <!-- <script type="text/javascript" src="resources/scripts/tab-bar.js"></script> -->
              <script type="text/javascript" src="resources/scripts/nav-tab-bar.js"></script>
             <!-- <script type="text/javascript" src="resources/scripts/stopInput.js"></script>  -->
-            
+            <script type = "text/javascript">
+            document.addEventListener('deviceready', function() {
+                window.plugins.tabBar.setSelectedTab("map");
+            });
+            </script>
 
     </body>
 </html>

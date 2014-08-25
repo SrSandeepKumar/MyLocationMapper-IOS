@@ -1,5 +1,5 @@
 var target = [];
-var alpha = true ;
+//var alpha = false ;
 var locArray = [];
 // var toasting = true;
 errorInGettingPostion = true;
@@ -12,16 +12,16 @@ window.plugins.navBar.create('Default',{'tintColorRgba':"163,30,24,1"});
 // window.plugins.navBar.setLogo('logo_header.png');
 window.plugins.navBar.setTitle('Location Mapper');
 
-window.plugins.navBar.setupLeftButton('', "back.png", function(){
-   if(confirm("want to exit ?")){
-        navigator.app.exitApp();
-    }
-}, {"useImageAsBackground":true});
+// window.plugins.navBar.setupLeftButton('', "back.png", function(){
+//    if(confirm("want to exit ?")){
+//         navigator.app.exitApp();
+//     }
+// }, {"useImageAsBackground":true});
                           
 //window.plugins.navBar.setupLeftButton("start", function(){goBack();}, {"useImageAsBackground":true});
-window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play1.png",
+window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play.png",
                       function(){
-                           if(alpha == false){
+                           //if(alpha == true){
             // toasting == true;
             if(confirm("Do you want to save trail ?")){
                 storeLoc(locArray);
@@ -32,7 +32,7 @@ window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play1.png",
                 if (watchID != null) {
                     navigator.geolocation.clearWatch(watchID);
                     watchID = null;
-                }
+                //}
                 locArray.length = 0;
             }else{window.location = "index.html";}
         }
@@ -42,14 +42,14 @@ window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play1.png",
                       function(){ 
                             watchPosition();
                             if(errorInGettingPostion == false){
-                              if(alpha == true){
+                              //if(alpha == false){
                              window.plugins.toast.showLongCenter('Starting to Mark your track', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
                             show();
                             start();
-                      }
+                     // }
                       }  else{
             window.plugins.toast.showLongCenter('Could not determine your current Location , Kindly ensure GPS and Internet is enabled !', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-            alpha = true;
+            //alpha = false;
         }                            
                       },
 
@@ -64,22 +64,23 @@ window.plugins.navBar.show();
                                                            "MAP",
                                                            "map32.png",
                                                            {onSelect:selectMap});
+
+
                           
                           window.plugins.tabBar.createItem(
                                                            "history",
                                                            "HISTORY",
                                                            "history32.png",
                                                            {onSelect:selectHistory});
+
+                          
                           
                           window.plugins.tabBar.showItems('map','history');
                          
                           window.plugins.tabBar.show();
+                          window.plugins.tabBar.setSelectedTab("map");
 
 });
-
-
-
-
 
 function selectMap(){
     map.clear();
@@ -91,6 +92,8 @@ function selectHistory(){
      map.refreshLayout();
      map.setVisible(false);
      window.location.href = "history.html";
+
+     
 }
 
 function storeLoc(pos){
@@ -123,7 +126,7 @@ function watchPosition(){
 }
 
 function onSuccess(position){
-    alert("in success");
+    
     var abc = new plugin.google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     locArray.push(abc);
     var d = findDistance(locArray);
