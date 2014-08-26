@@ -1,5 +1,5 @@
 document.addEventListener('deviceready', function() {
-    alert("inside history");
+    
                           
                           window.plugins.tabBar.createItem(
                                                            "map",
@@ -46,14 +46,14 @@ function retrieveName(name) {
 }
 
 function display(){
-    console.log(count);
+    
     count++;
     console.log("In display block, times: " + count);
     var getNar = JSON.parse(localStorage.getItem('nar'));
     if(getNar) {
         console.log("Nar from DB" +getNar);
         var obj = getNar.length;
-        console.log("length of localStorage"+obj);
+        
         for (var index = 0; index < getNar.length; index++) {
             console.log(getNar[index].idd);
             console.log(getNar[index].name);
@@ -81,21 +81,20 @@ $(document).ready(function(){
     var retrievedObject = display();
 
     if (typeof(retrievedObject)!= "undefined") {
-        console.log(retrievedObject.idd);
+        
 
         $(".toDelete").on('click',function(){
             if(confirm("Are you sure to delete this Run?")) {
                 var position = parseInt($(this).data("position"));
-                console.log(position);
+                
                 var nar = $.parseJSON(localStorage.nar);
-                console.log(nar);
-                console.log(nar.length);
+                
                 nar.splice(position,1);
-                console.log(nar.length);
+                
                 localStorage.setItem("nar" , JSON.stringify(nar));
-                console.log(nar);
+                
                 $(this).parents(".panel").remove();
-                console.log(localStorage);
+                
             }
         });
 
@@ -103,10 +102,9 @@ $(document).ready(function(){
             var mPlot;
             if(confirm("Are you sure to Plot this Run?")) {
                 var position = parseInt($(this).data("position"));
-                console.log(retrievedObject[position]);
+                
                 var temp =  localStorage.setItem("mPlot",JSON.stringify(retrievedObject[position]));
-                console.log(temp);
-                console.log(mPlot);
+               
                 location.href = "toPlot.html";
             }
         });
@@ -115,11 +113,5 @@ $(document).ready(function(){
 
 });
 
-document.addEventListener("backbutton", function(){
-if(confirm("Going back to Map ?")){
-        window.location = "index.html";
-    }
 
-    
-}, false);
 

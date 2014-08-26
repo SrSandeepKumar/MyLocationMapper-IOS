@@ -1,22 +1,18 @@
 document.addEventListener('deviceready', function() {
-	window.plugins.navBar.setMenu([ ], function(e) {
-		console.log(e);
-	});
+    alert("inside the navbar module of the stopinput");
+   window.plugins.navBar.setTitle("My run's Details");
+ 
+    window.plugins.navBar.setupRightButtons(''," ",''," ",
+      function(){ }, 
 
-	window.plugins.navBar.setTabs([
-	{ 
-		text: ' Information',
-		selected:false,
-		select: function() { }
-}], function(e) {
-	console.log(e);
-}
+      function(){ }
 );
 
-	window.plugins.navBar.setNavigationMode(window.plugins.navBar.NAVIGATION_MODE_TABS);
-	window.plugins.navBar.setSelectedTab(0);
-	window.plugins.navBar.show();
-});
+    window.plugins.tabBar.hide();
+
+  });
+
+  alert("in stkopinput.js");
 
 
 $(document).ready(function(){
@@ -51,7 +47,16 @@ $(".sub").on('click',function(){
 						location.href = "history.html";
 					}
 					else{
-						alert("Please ckeck whether you have filled Name field and Conditions are satisfied !!! ");
+						//alert("Please ckeck whether you have filled Name field and Conditions are satisfied !!! ");
+						 function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',
+            function(){ },
+            'Warring', 
+            'Ok'  
+        );
+
+
 					}
 				});
 

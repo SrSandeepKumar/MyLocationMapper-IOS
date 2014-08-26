@@ -1,15 +1,21 @@
 var target = [];
-//var alpha = false ;
+var alpha = false ;
 var locArray = [];
 // var toasting = true;
 errorInGettingPostion = true;
 
 document.addEventListener('deviceready', function() {
-    
+  // navigator.notification.confirm(
+  //       'You are the winner!', // message
+  //        null,            // callback to invoke with index of button pressed
+  //       'Game Over',           // title
+  //       'Restart,Exit'         // buttonLabels
+  //   );
+
                          
 window.plugins.navBar.create('Default',{'tintColorRgba':"163,30,24,1"});
 
-// window.plugins.navBar.setLogo('logo_header.png');
+ window.plugins.navBar.setLogo('play.png');
 window.plugins.navBar.setTitle('Location Mapper');
 
 // window.plugins.navBar.setupLeftButton('', "back.png", function(){
@@ -21,9 +27,17 @@ window.plugins.navBar.setTitle('Location Mapper');
 //window.plugins.navBar.setupLeftButton("start", function(){goBack();}, {"useImageAsBackground":true});
 window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play.png",
                       function(){
-                           //if(alpha == true){
+                           if(alpha == true){   alert("blah");
             // toasting == true;
-            if(confirm("Do you want to save trail ?")){
+navigator.notification.confirm(
+        'Do you want to save the trail!', // message
+         onConfirm,            // callback to invoke with index of button pressed
+        'Stoping',           // title
+        'Yes,No'         // buttonLabels
+    );
+            function onConfirm(buttonIndex) {
+    alert('You selected button ' + buttonIndex);
+    if(buttonIndex === 1){
                 storeLoc(locArray);
                 map.refreshLayout();
                 map.setVisible(false);
@@ -32,24 +46,28 @@ window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play.png",
                 if (watchID != null) {
                     navigator.geolocation.clearWatch(watchID);
                     watchID = null;
-                //}
+                }
                 locArray.length = 0;
             }else{window.location = "index.html";}
         }
+}
+
+                     
         
                       }, 
 
                       function(){ 
                             watchPosition();
                             if(errorInGettingPostion == false){
-                              //if(alpha == false){
+                              if(alpha == false){
                              window.plugins.toast.showLongCenter('Starting to Mark your track', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
                             show();
                             start();
-                     // }
+                            alpha = true;
+                      }
                       }  else{
             window.plugins.toast.showLongCenter('Could not determine your current Location , Kindly ensure GPS and Internet is enabled !', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-            //alpha = false;
+            alpha = false;
         }                            
                       },
 
@@ -138,7 +156,7 @@ function onSuccess(position){
 
 
 function onError(error) {
-    alert("in on error");
+    
     // alert("Could not determine your current Location , Kindly ensure GPS and Internet is enabled !");
     errorInGettingPostion = true;
     console.log(errorInGettingPostion);
