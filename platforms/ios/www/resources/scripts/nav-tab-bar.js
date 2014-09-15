@@ -27,7 +27,7 @@ window.plugins.navBar.setTitle('Location Mapper');
 //window.plugins.navBar.setupLeftButton("start", function(){goBack();}, {"useImageAsBackground":true});
 window.plugins.navBar.setupRightButtons('',"stop1.png",'',"play.png",
                       function(){
-                           if(alpha == true){   alert("blah");
+                           if(alpha == true){   
             // toasting == true;
 navigator.notification.confirm(
         'Do you want to save the trail!', // message
@@ -36,7 +36,7 @@ navigator.notification.confirm(
         'Yes,No'         // buttonLabels
     );
             function onConfirm(buttonIndex) {
-    alert('You selected button ' + buttonIndex);
+    
     if(buttonIndex === 1){
                 storeLoc(locArray);
                 map.refreshLayout();
@@ -148,7 +148,7 @@ function onSuccess(position){
     var abc = new plugin.google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     locArray.push(abc);
     var d = findDistance(locArray);
-    if(parseInt(d  * 1000) > 5 ) points.plotLine(locArray);
+    if(parseInt(d  * 1000) > 15 ) points.plotLine(locArray);
     
     errorInGettingPostion = false;
 }

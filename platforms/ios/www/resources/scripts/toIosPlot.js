@@ -1,16 +1,44 @@
 var map;
+var clicks = true;
 
 document.addEventListener("deviceready", function() {
-    alert("comming inside toplot");
+    
     var plot = $.parseJSON(localStorage.mPlot);
     $('#mapType').html("Map");
     $('#time').html(plot.time);
     $('#distance').html(parseInt(plot.distance)+"Kms") 
-    var clicks = true;
+    
     var div = document.getElementById("map_canvas");
     map = plugin.google.maps.Map.getMap(div);
 
-    $(".mapType").click(function() {
+
+    
+
+    window.plugins.navBar.setupLeftButton('', "back.png", function(){
+        map.refreshLayout();
+        map.setVisible(false);
+        window.location.href = "history.html";
+    }, {"useImageAsBackground":true});
+
+    window.plugins.navBar.setTitle(plot.name);
+
+    window.plugins.navBar.setupRightButtons(''," ",''," ",
+      function(){ }, 
+
+      function(){ },
+
+      {"useImageAsBackground":true});
+
+    window.plugins.tabBar.hide();
+
+    map.clear();
+    map.setVisible(true);
+    points.plotLine(plot.location);
+
+    console.log("after everything");
+
+$(".mapType").click(function() {
+        console.log("clicked on map div");
         if (clicks) {
             map.setMapTypeId(plugin.google.maps.MapTypeId.ROADMAP);
             clicks = false;
@@ -23,30 +51,6 @@ document.addEventListener("deviceready", function() {
             type.innerHTML = "Earth";
         }
     });
-    alert("after initilazing everything in bottom bar");
-
- window.plugins.navBar.setupLeftButton('', "back.png", function(){
-    map.refreshLayout();
-    map.setVisible(false);
-    window.location.href = "history.html";
-}, {"useImageAsBackground":true});
-
-window.plugins.navBar.setTitle(plot.name);
-
-window.plugins.navBar.setupRightButtons(''," ",''," ",
-                      function(){ }, 
-
-                      function(){ },
-
-                       {"useImageAsBackground":true});
-
-window.plugins.tabBar.hide();
-
-    map.clear();
-    map.setVisible(true);
-    points.plotLine(plot.location);
-
-alert("end");
 
 
 });

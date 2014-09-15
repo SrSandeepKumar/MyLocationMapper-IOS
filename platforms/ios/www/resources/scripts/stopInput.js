@@ -1,5 +1,5 @@
 document.addEventListener('deviceready', function() {
-    alert("inside the navbar module of the stopinput");
+   
    window.plugins.navBar.setTitle("My run's Details");
  
     window.plugins.navBar.setupRightButtons(''," ",''," ",
@@ -12,7 +12,7 @@ document.addEventListener('deviceready', function() {
 
   });
 
-  alert("in stkopinput.js");
+  
 
 
 $(document).ready(function(){
@@ -47,17 +47,26 @@ $(".sub").on('click',function(){
 						location.href = "history.html";
 					}
 					else{
-						//alert("Please ckeck whether you have filled Name field and Conditions are satisfied !!! ");
-						 function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',
-            function(){ },
-            'Warring', 
-            'Ok'  
+
+function alertDismissed() {
+        // do something
+        
+    }
+
+   
+   
+        navigator.notification.confirm(
+            'Make sure fields are not empty and conditions are satisfied!',  // message
+            alertDismissed,         // callback
+            'Warning !',            // title
+            'Done'                  // buttonName
         );
+    
 
 
-					}
+}
+						
+						 
 				});
 
 document.addEventListener("backbutton", function(){
