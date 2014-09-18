@@ -5,11 +5,13 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		04763D9ABA2E4358A59BD337 /* PluginUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A666B8BBE980484B98A3616B /* PluginUtil.m */; };
 		062F8ACFD89D48AB9EEBE96B /* BSD-LICENSE in Sources */ = {isa = PBXBuildFile; fileRef = 92BD63EE4146480DB0ECF090 /* BSD-LICENSE */; };
 		0B33A4FC335542508B0CCB19 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D2CD7D7F5548959A19B26D /* NSData+Base64.m */; };
 		15C89FACB50D420EA9DC69C0 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9A4057EAF4D4D89B01A80 /* TBXML.m */; };
+		15FB7691848049B98AE070D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E838517E8A08444EBE217027 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
@@ -52,6 +54,7 @@
 		7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DB1810823500FA85AD /* icon-76@2x.png */; };
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
+		83EAB5C50F0C4AAA8F7FF757 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E48D8A323A4B4361B84F53DF /* CDVNotification.m */; };
 		9A30C3F619A479CB0049BB9B /* CDVNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A30C3F519A479CB0049BB9B /* CDVNavigationBar.xib */; };
 		9A721A6E19A3764200242A42 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A721A6D19A3764200242A42 /* TabBar.m */; };
 		9A721A7619A3764900242A42 /* CDVNavigationBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A721A7119A3764900242A42 /* CDVNavigationBarController.m */; };
@@ -74,6 +77,8 @@
 		9AC1DCD619A721CD0053CE58 /* history32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1DCD519A721CD0053CE58 /* history32@2x.png */; };
 		9AC1DCD819A721D50053CE58 /* map32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1DCD719A721D50053CE58 /* map32.png */; };
 		9AC1DCDA19A721E00053CE58 /* map32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC1DCD919A721E00053CE58 /* map32@2x.png */; };
+		9AC8FAFB19CA9CD200F583E7 /* Default-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8FAFA19CA9CD200F583E7 /* Default-iphone.png */; };
+		9AC8FAFD19CA9CD800F583E7 /* Default-568@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8FAFC19CA9CD800F583E7 /* Default-568@2x~iphone.png */; };
 		9ACA1DE619A726DB003CC82C /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACA1DE419A726DB003CC82C /* btn_back.png */; };
 		9ACA1DE719A726DB003CC82C /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACA1DE519A726DB003CC82C /* btn_back@2x.png */; };
 		9AF55B8B199CBA29005D35DB /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF55B8A199CBA29005D35DB /* GoogleMaps.framework */; };
@@ -173,9 +178,7 @@
 		CCCA834DFEF1400CAAEE95B2 /* External.m in Sources */ = {isa = PBXBuildFile; fileRef = 349EA0F37E81426FB8C6A0A7 /* External.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DE3840963122491F9C1D0253 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = C32762CD732745BDA4B116F5 /* Toast+UIView.m */; };
-		83EAB5C50F0C4AAA8F7FF757 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E48D8A323A4B4361B84F53DF /* CDVNotification.m */; };
 		E4026AF1BE554679A66D7A7F /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1436276EC2EB43648359AD63 /* CDVNotification.bundle */; };
-		15FB7691848049B98AE070D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E838517E8A08444EBE217027 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +201,7 @@
 /* Begin PBXFileReference section */
 		0B07CF5EF495495D80E41AEE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = HelloCordova/Plugins/com.googlemaps.ios/GoogleMaps.framework; sourceTree = "<group>"; };
 		0D4BD65A5EE047D58AB71B2C /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = plugin.http.request/HttpRequest/HttpRequest.h; sourceTree = "<group>"; };
+		1436276EC2EB43648359AD63 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDVNotification.bundle; sourceTree = "<group>"; };
 		184D19FD594944F0AF741387 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "nl.x-services.plugins.toast/Toast+UIView.h"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -282,6 +286,8 @@
 		9AC1DCD519A721CD0053CE58 /* history32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history32@2x.png"; sourceTree = "<group>"; };
 		9AC1DCD719A721D50053CE58 /* map32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map32.png; sourceTree = "<group>"; };
 		9AC1DCD919A721E00053CE58 /* map32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map32@2x.png"; sourceTree = "<group>"; };
+		9AC8FAFA19CA9CD200F583E7 /* Default-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iphone.png"; sourceTree = "<group>"; };
+		9AC8FAFC19CA9CD800F583E7 /* Default-568@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x~iphone.png"; sourceTree = "<group>"; };
 		9ACA1DE419A726DB003CC82C /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
 		9ACA1DE519A726DB003CC82C /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		9AF55B8A199CBA29005D35DB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../GoogleMaps-iOS-1.8.1/GoogleMaps.framework"; sourceTree = "<group>"; };
@@ -387,10 +393,13 @@
 		D8F4842D5EEB4B3FA4610022 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = plugin.http.request/HttpRequest/HttpRequest.m; sourceTree = "<group>"; };
 		D8F537CFD416490BBE90C6E6 /* KmlOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KmlOverlay.h; path = plugin.google.maps/KmlOverlay.h; sourceTree = "<group>"; };
 		DC4494C6FF7C4F99BA6C418B /* TileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileOverlay.h; path = plugin.google.maps/TileOverlay.h; sourceTree = "<group>"; };
+		E2811110E3514DD8B44B8E86 /* CDVNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVNotification.h; path = org.apache.cordova.dialogs/CDVNotification.h; sourceTree = "<group>"; };
+		E48D8A323A4B4361B84F53DF /* CDVNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVNotification.m; path = org.apache.cordova.dialogs/CDVNotification.m; sourceTree = "<group>"; };
 		E5D4A745BFE6416488670413 /* KmlOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KmlOverlay.m; path = plugin.google.maps/KmlOverlay.m; sourceTree = "<group>"; };
 		E5F163356FF94335AAA70657 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = plugin.google.maps/Map.h; sourceTree = "<group>"; };
 		E626F1B339CA4D4A90177FF7 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = plugin.google.maps/Circle.h; sourceTree = "<group>"; };
 		E810EC96735F4468B0599292 /* GoogleMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleMapsViewController.m; path = plugin.google.maps/GoogleMapsViewController.m; sourceTree = "<group>"; };
+		E838517E8A08444EBE217027 /* AudioToolbox.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E8A2CE45089E4424AC013E4D /* GroundOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroundOverlay.m; path = plugin.google.maps/GroundOverlay.m; sourceTree = "<group>"; };
 		EB87FDF21871DA7A0020F90C /* merges */ = {isa = PBXFileReference; lastKnownFileType = folder; name = merges; path = ../../merges; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
@@ -398,10 +407,6 @@
 		F6D2CD7D7F5548959A19B26D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "plugin.google.maps/NSData+Base64.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
 		FAF55CC9F11F4E1BBFB2883B /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = "nl.x-services.plugins.toast/Toast.h"; sourceTree = "<group>"; };
-		E48D8A323A4B4361B84F53DF /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "org.apache.cordova.dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		E2811110E3514DD8B44B8E86 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		1436276EC2EB43648359AD63 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
-		E838517E8A08444EBE217027 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -634,6 +639,8 @@
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				9AC8FAFC19CA9CD800F583E7 /* Default-568@2x~iphone.png */,
+				9AC8FAFA19CA9CD200F583E7 /* Default-iphone.png */,
 				9A30C3F519A479CB0049BB9B /* CDVNavigationBar.xib */,
 				D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */,
 				3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */,
@@ -1058,6 +1065,7 @@
 				9AF55CBC199CD40D005D35DB /* fontawesome-webfont.svg in Resources */,
 				9AF55CD1199CD40D005D35DB /* _larger.scss in Resources */,
 				9AF55CD3199CD40D005D35DB /* _mixins.scss in Resources */,
+				9AC8FAFD19CA9CD800F583E7 /* Default-568@2x~iphone.png in Resources */,
 				9AF55CBD199CD40D005D35DB /* fontawesome-webfont.ttf in Resources */,
 				9AF55CCA199CD40D005D35DB /* spinning.less in Resources */,
 				9AF55CCB199CD40D005D35DB /* stacked.less in Resources */,
@@ -1133,6 +1141,7 @@
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				9AF55CD8199CD40D005D35DB /* _variables.scss in Resources */,
 				9ABAA59519AB15EF00514735 /* stop1.png in Resources */,
+				9AC8FAFB19CA9CD200F583E7 /* Default-iphone.png in Resources */,
 				9AF55CC9199CD40D005D35DB /* rotated-flipped.less in Resources */,
 				9AF55CD0199CD40D005D35DB /* _icons.scss in Resources */,
 				9AF55CF7199CD40D005D35DB /* jquery.mobile-1.4.2.min.css in Resources */,
