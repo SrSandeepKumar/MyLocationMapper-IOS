@@ -9,19 +9,15 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"HttpRequest\"><param name=\"ios-package\" value=\"HttpRequest\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"GoogleMaps\"><param name=\"ios-package\" value=\"GoogleMaps\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -29,78 +25,28 @@
             },
             "framework": {
                 "parents": {
-                    "AVFoundation.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "CoreData.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
+                    "AVFoundation.framework": [],
+                    "CoreData.framework": [],
                     "CoreLocation.framework": [
                         {
                             "xml": "false",
                             "count": 1
                         }
                     ],
-                    "CoreText.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "GLKit.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "ImageIO.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "libc++.dylib": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "libicucore.dylib": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "libz.dylib": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "OpenGLES.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
+                    "CoreText.framework": [],
+                    "GLKit.framework": [],
+                    "ImageIO.framework": [],
+                    "libc++.dylib": [],
+                    "libicucore.dylib": [],
+                    "libz.dylib": [],
+                    "OpenGLES.framework": [],
                     "QuartzCore.framework": [
                         {
                             "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": "false",
                             "count": 1
                         }
                     ],
+                    "SystemConfiguration.framework": [],
                     "AudioToolbox.framework": [
                         {
                             "xml": "true",
@@ -111,9 +57,10 @@
             },
             "*-Info.plist": {
                 "parents": {
-                    "Google Maps API Key": [
+                    "Google Maps API Key": [],
+                    "NSLocationWhenInUseUsageDescription": [
                         {
-                            "xml": "<string>AIzaSyBTVvRF5MHLWiiA4S7KIXW70Q3aZVKBcAw</string>",
+                            "xml": "<string />",
                             "count": 1
                         }
                     ]
@@ -122,23 +69,15 @@
         }
     },
     "installed_plugins": {
-        "plugin.google.maps": {
-            "API_KEY_FOR_IOS": "AIzaSyBTVvRF5MHLWiiA4S7KIXW70Q3aZVKBcAw",
-            "PACKAGE_NAME": "com.Application.LocationMapper"
-        },
         "nl.x-services.plugins.toast": {
             "PACKAGE_NAME": "com.Application.LocationMapper"
         },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.Application.LocationMapper"
+        },
+        "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "com.Application.LocationMapper"
         }
     },
-    "dependent_plugins": {
-        "plugin.http.request": {
-            "PACKAGE_NAME": "com.Application.LocationMapper"
-        },
-        "com.googlemaps.ios": {
-            "PACKAGE_NAME": "com.Application.LocationMapper"
-        }
-    }
+    "dependent_plugins": {}
 }

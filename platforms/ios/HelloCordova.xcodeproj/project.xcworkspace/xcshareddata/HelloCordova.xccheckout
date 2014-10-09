@@ -14,7 +14,7 @@
 		<string>https://bitbucket.org/_sandeep_kumar_/sandeep-kumar-h-r.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>platforms/ios/HelloCordova.xcodeproj/project.xcworkspace</string>
+	<string>platforms/ios/HelloCordova.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B7FB4DDE7FD3D8E256186280DD42238A359E72BE</key>

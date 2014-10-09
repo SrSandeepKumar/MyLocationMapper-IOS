@@ -40,16 +40,13 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="HttpRequest">
-        <param name="ios-package" value="HttpRequest" />
-    </feature>
-    <feature name="GoogleMaps">
-        <param name="ios-package" value="GoogleMaps" />
-    </feature>
     <feature name="Toast">
         <param name="ios-package" value="Toast" />
     </feature>
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
     </feature>
 </widget>
